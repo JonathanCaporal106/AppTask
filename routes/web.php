@@ -17,7 +17,6 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('Tasks', TaskController::class);
-    Route::patch('/tasks/{id}', [TaskController::class, 'update'])->name('Tasks.update');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
