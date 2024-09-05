@@ -10,9 +10,9 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Artisan;
 
 Artisan::command('LogTimeCommand', function () {
-    // Obtener las tareas que necesitan recordatorio
+    // Obtener las tareas que tienen recordatorio 2 minutos antes de la hora de vencimiento
     $tasks = Task::where('due_date', Carbon::now()->toDateString())
-                 ->where('due_time', Carbon::now()->format('H:i'))
+                 ->where('due_time', Carbon::now()->addMinutes(5)->format('H:i'))
                  ->get();
 
     // Enviar recordatorio a los usuarios solo si hay tareas
@@ -27,3 +27,4 @@ Artisan::command('LogTimeCommand', function () {
         $this->info('No tasks due at the current time.');
     }
 })->purpose('Send mail')->everyMinute();
+
