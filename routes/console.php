@@ -18,7 +18,7 @@ Artisan::command('LogTimeCommand', function () {
     // Enviar recordatorio a los usuarios solo si hay tareas
     if ($tasks->isNotEmpty()) {
         foreach ($tasks as $task) {
-            Mail::to('UserExample@gmai.com')->send(new EnviarCorreo($task));
+            Mail::to('UserExample@gmail.com')->send(new EnviarCorreo($task));
         }
 
         // Mostrar mensaje de éxito
