@@ -22,7 +22,7 @@
         }
         .header {
             background-color: #3498db;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             color: #ffffff;
         }
@@ -84,7 +84,7 @@
             <p>Thank you,<br>Your Task Management Team</p>
         </div>
         <div class="footer">
-            <p>&copy; 2024 Task Management, All rights reserved.</p>
+            <p>&copy; All rights reserved.</p>
         </div>
     </div>
 </body>

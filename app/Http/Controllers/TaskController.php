@@ -94,7 +94,7 @@ class TaskController extends Controller
         }
     
         if ($request->has('due_date')) {
-            $data['due_date'] = Carbon::createFromFormat('d-m-Y', $request->input('due_date'))->format('d-m-Y');
+            $data['due_date'] = Carbon::createFromFormat('Y-m-d', $request->input('due_date'))->format('Y-m-d');
         }
     
         $task->update($data);

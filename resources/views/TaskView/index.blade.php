@@ -37,18 +37,36 @@
                         </div>
                     @endif
 
+                    <script>
+                        // Desaparece el mensaje de éxito después de 10 segundos (10000 ms)
+                        setTimeout(function() {
+                            let successMessage = document.getElementById('successMessage');
+                            if (successMessage) {
+                                successMessage.style.display = 'none';
+                            }
+                        }, 10000); // 10 segundos
+                    
+                        // Desaparece el mensaje de error después de 10 segundos (10000 ms)
+                        setTimeout(function() {
+                            let errorMessage = document.getElementById('errorMessage');
+                            if (errorMessage) {
+                                errorMessage.style.display = 'none';
+                            }
+                        }, 10000); // 10 segundos
+                    </script>
+
                     <!-- Lista de tareas -->
-                    <table class="table table-bordered mt-4 rounded-lg">
+                    <table class="table table-bordered mt-4 rounded-lg" style="border-radius: 12px; overflow: hidden;">
                         <thead class="bg-blue-500 text-white">
                             <tr>
-                                <th>ID</th>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Status</th>
-                                <th>Priority</th>
-                                <th>Hour</th>
-                                <th>Due Date</th>
-                                <th>Actions</th>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">Title</th>
+                                <th class="text-center">Description</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Priority</th>
+                                <th class="text-center">Hour</th>
+                                <th class="text-center">Due Date</th>
+                                <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,10 +87,11 @@
                                         </button>
                                     </div>
                             
-                                        <button data-toggle="modal" data-target="#confirmDeleteModal--{{$Task->id}}"  class="btn btn-danger">Delete</button>
-                                                                      
+                                        <button data-toggle="modal" data-target="#confirmDeleteModal--{{$Task->id}}"  class="btn btn-danger">Delete</button>                   
                                 </td>
                             </tr>
+
+                            
 <!-- Modal Delete Task -->
 <div class="modal fade" id="confirmDeleteModal--{{$Task->id}}" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModal" aria-hidden="true">
     <div class="modal-dialog" role="document">

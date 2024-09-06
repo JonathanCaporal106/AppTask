@@ -52,7 +52,8 @@ class EnviarCorreo extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        
+        return [ ];
     }
 
     public function build()
