@@ -1,9 +1,5 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Tasks') }}
-        </h2>
-    </x-slot>
+   
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -36,24 +32,6 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif
-
-                    <script>
-                        // Desaparece el mensaje de éxito después de 10 segundos (10000 ms)
-                        setTimeout(function() {
-                            let successMessage = document.getElementById('successMessage');
-                            if (successMessage) {
-                                successMessage.style.display = 'none';
-                            }
-                        }, 10000); // 10 segundos
-                    
-                        // Desaparece el mensaje de error después de 10 segundos (10000 ms)
-                        setTimeout(function() {
-                            let errorMessage = document.getElementById('errorMessage');
-                            if (errorMessage) {
-                                errorMessage.style.display = 'none';
-                            }
-                        }, 10000); // 10 segundos
-                    </script>
 
                     <!-- Lista de tareas -->
                     <table class="table table-bordered mt-4 rounded-lg" style="border-radius: 12px; overflow: hidden;">
