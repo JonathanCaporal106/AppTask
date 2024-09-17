@@ -7,14 +7,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #a0a0ae;
+            background-color: #aaaab6;
             margin: 0;
             padding: 0;
             color: #333;
         }
         .email-container {
             max-width: 600px;
-            margin: 20px auto;
+            margin: 70px auto;
             background-color: #ffffff;
             border-radius: 10px;
             overflow: hidden;
@@ -22,7 +22,7 @@
         }
         .header {
             background-color: #3498db;
-            padding: 15px;
+            padding: 15px 15px;
             text-align: center;
             color: #ffffff;
         }
@@ -52,6 +52,7 @@
     </style>
 </head>
 <body>
+    <body style="background-color: gray;">
     <div class="email-container">
         <div class="header">
             <h1>Task Reminder</h1>
